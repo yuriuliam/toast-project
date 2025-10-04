@@ -12,7 +12,7 @@ function ToastPlayground() {
   const { pushToast } = useToast()
 
   const [message, setMessage] = React.useState("")
-  const [variant, setVariant] = React.useState("notice")
+  const [variant, setVariant] = React.useState(VARIANT_OPTIONS[0])
 
   const handlePopToast = (evt) => {
     evt.preventDefault()
@@ -21,7 +21,7 @@ function ToastPlayground() {
 
     pushToast({ message, variant })
     setMessage("")
-    setVariant("notice")
+    setVariant(VARIANT_OPTIONS[0])
   }
 
   return (
